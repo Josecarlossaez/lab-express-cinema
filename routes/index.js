@@ -15,7 +15,24 @@ router.get("/movies", (req,res,next) => {
         })
     })
     .catch((err) =>{
-        console.log(err)
+        next(err)
+    })
+})
+
+router.get("/movie/:movieId" , (req, res, next) => {
+    const {movieId} = req.params
+    Movies.findById(movieId)
+    .then((response) => {
+        console.log(response)
+        res.render("details.hbs", {
+            
+            details : response
+
+        })
+    })   
+
+    .catch((err) => {
+        next(err)
     })
 })
 

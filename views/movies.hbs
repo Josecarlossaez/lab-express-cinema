@@ -1,8 +1,12 @@
-
-<ol>
+<div class ="order-movies">
+  <div class = "lista-pelis">
+  <ol>
     {{#each listMovies}}
-  <img src="{{image}}" alt="movie">
+      <img src="{{image}}" alt="movie">
   
-<a href="/movie/{{this._id}}"> <h4>{{title}}</h4></a>
+      <a href="/movie/{{this._id}}"> <h4>{{title}}</h4></a>
     {{/each}}
-</ol>
+   </ol>
+   </div>
+
+</div>

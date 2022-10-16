@@ -20,9 +20,12 @@ router.get("/movies", (req,res,next) => {
 })
 
 router.get("/movie/:movieId" , (req, res, next) => {
+    
     const {movieId} = req.params
     Movies.findById(movieId)
     .then((response) => {
+        let horarios = response.showtimes.toString().replace(/,/g,"  |  ")
+        response.showtimes = horarios
         console.log(response)
         res.render("details.hbs", {
             

@@ -1,12 +1,15 @@
 <div class ="order-movies">
   <div class = "lista-pelis">
-  <ol>
-    {{#each listMovies}}
-      <img src="{{image}}" alt="movie">
   
-      <a href="/movie/{{this._id}}"> <h4>{{title}}</h4></a>
+    {{#each listMovies}}
+     <ol>
+      <img src="{{image}}" alt="movie">
+     
+  <h4>{{title}}</h4>
+      <a href="/movie/{{this._id}}"><h5>see more</h5> </a>
+      </ol>
     {{/each}}
-   </ol>
+  
    </div>
 
 </div>

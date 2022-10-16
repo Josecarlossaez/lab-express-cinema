@@ -15,36 +15,49 @@ h1{
   font-size: 60px;
   color:white;
   padding-bottom: -30px;
+  margin-left: 600px;
 }
 #check{
+margin-right: 50px;
   width: 200px;
   height: 35px;
   border-radius: 20px;
   font-size: 15px;
 }
 #cinema{
+  display: flex;
+  width:900px;
+  height: 600px;
   background-image:url(/images/cinema.jpg) ;
   background-repeat:no-repeat;
-display: flex;
+
 justify-content: center;
 align-items: end;
 flex-direction: column;
 
 }
-.order-movies{
+/* .order-movies{
   display: flex;
  
   flex-direction: row;
   justify-content: start;
+} */
 
-  
-  
-
-
-}
 .lista-pelis{
   display: flex;
   flex-direction: row;
   justify-content: start;
+  flex-wrap:wrap;
+  gap:20px;
+  text-align: center;
 
+}
+
+#details{
+ display:flex;
+
+flex-direction: row; 
+}
+#image-details{
+  margin-top: 20px;
 }
